@@ -19,7 +19,7 @@
     <ul id="nav-mobile" class="black-text right hide-on-med-and-down">
       <li><a href="index.html" class="black-text">Home</a></li>
       <li><a href="services.html" class="black-text">Services</a></li>
-      <li><a href="form.html" class="black-text">Form</a></li>
+      <li><a href="form.html" class="black-text">Apply</a></li>
       <li><a href="contact.html" class="black-text">Contact Us</a></li>
     </ul>
   </div>
@@ -29,7 +29,7 @@
   <br> <br> <br>
   <li><a href="index.html">Home</a></li>
   <li><a href="services.html">Services</a></li>
-  <li><a href="form.html">Form</a></li>
+  <li><a href="form.html">Apply</a></li>
   <li><a href="contact.html">Contact Us</a></li>
 </ul>
 
@@ -42,7 +42,8 @@
   <section>
     <div class="container center">
       <h3>Reason</h3>
-      <p>This site was originally made to create a database for all tertiary institution service <br>to faciliate easier searches for services</p>
+      <p>This site was originally made to create a database for all tertiary institution service <br>to faciliate easier
+        searches for services</p>
     </div>
   </section>
 
@@ -68,5 +69,34 @@
     M.AutoInit();
   </script>
 </body>
+//
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+//
+<!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+<script>
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD99tTPFLh-pI4v1kbpdkP9x2FS92uVwSo",
+    authDomain: "database-369d0.firebaseapp.com",
+    databaseURL: "https://database-369d0.firebaseio.com",
+    projectId: "database-369d0",
+    storageBucket: "database-369d0.appspot.com",
+    messagingSenderId: "572557648865",
+    appId: "1:572557648865:web:e80c73baae844ad339a8a0",
+    measurementId: "G-M7F2GVNYD8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  db = firebase.firestore()
+
+  
+</script>
 
 </html>

@@ -1,0 +1,22 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "a general database for different Student services in Nigerian Tertiary Institution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KROM-TECH/database.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KROM-TECH/database/issues"
+  },
+  "homepage": "https://github.com/KROM-TECH/database#readme",
+  "dependencies": {
+    "firebase": "^7.14.4"
+  }
+}

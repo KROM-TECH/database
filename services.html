@@ -42,7 +42,7 @@
       <p>Select the institution and service you looking for <br> And Search <br>It's that simple</p>
       <br> <br>
       <div class="input-field col s12">
-        <select>
+        <select id="university">
           <option value="" disabled selected>Choose your option</option>
           <option value="unilag">University of Lagos</option>
           <option value="ui">University of Ibadan</option>
@@ -56,7 +56,7 @@
           <option value="futa">Federal University of Technology, Akure</option>
           <option value="futmina">Federal University of Technology, Minna</option>
           <option value="fuaa">Federal University of Agriculture, Abeokuta</option>
-          <option value="abu">Afe Babalola University</option>
+          <option value="abu2">Afe Babalola University</option>
           <option value="lautech">Ladoke Akintola University of Technology</option>
           <option value="futo">Federal University of Technology, Owerri</option>
           <option value="lu">Landmark University</option>
@@ -70,9 +70,9 @@
       </div>
 
       <div class="input-field col s12">
-        <select>
+        <select id="service">
           <option value="" disabled selected>Choose your option</option>
-          <option value="Accomodation">Accomodation Services</option>
+          <option value="accomodation">Accomodation Services</option>
           <option value="catering">Catering Services</option>
           <option value="comestic">Cosmetic accessories Services</option>
           <option value="event">Event Planning Services</option>
@@ -92,7 +92,7 @@
       </div>
 
       <div class="row center">
-        <button type="submit" id="sub" class=" waves-effect waves-light btn"><i
+        <button type="submit" id="search" class=" waves-effect waves-light btn"><i
             class="material-icons right">search</i>Search</button>
       </div>
     </div>
@@ -106,34 +106,37 @@
       <p>Below are the search results for services in university</p>
     </div>
     <ul class="collapsible">
-      <li>
-        <div class="collapsible-header ">Business Name</div>
-        <div class="collapsible-body">
-          <p> <span class="blue-text">Description</span>:- Lorem ipsum dolor sit amet.</p>
-          <p> <span class="blue-text">Specifications</span>:- Lorem ipsum dolor sit amet.</p>
-          <p> <span class="blue-text">Contact</span>:- Lorem ipsum dolor sit amet.</p>
 
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header">Second</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
-      <li>
-        <div class="collapsible-header">Third</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
     </ul>
 
   </section>
 
 
   <!--JavaScript at end of body for optimized loading-->
-  <script src="./js/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     M.AutoInit();
   </script>
+  
+  <!--Firebase App(the core Firebase SDK) is always required and must be listed first-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  
+  <!--If you enabled Analytics in your project, add the Firebase SDK for Analytics-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+  
+  <!--Add Firebase products that you want to use-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+  <script src="./js/fire.js"></script>
+  <script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    db = firebase.firestore()
+  </script>
+  
+  
+  <script src="./js/get.js"></script>
 </body>
 
 </html>

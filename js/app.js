@@ -10,17 +10,6 @@ document.getElementById('sub').addEventListener('click', function(e){
   const specification = document.getElementById('spec').value
   const contact = document.getElementById('contact').value
 
-  console.log(university)
-  console.log(service)
-  console.log(fullName)
-  console.log(email)
-  console.log(bisName)
-  console.log(description)
-  console.log(specification)
-  console.log(contact)
-  
-
-
 
   db.collection(university).doc(`${bisName}` +'.' + `${fullName.charAt(0)}`).set({
   service:service,
@@ -38,4 +27,6 @@ document.getElementById('sub').addEventListener('click', function(e){
     // location.reload()
   })
 });
+
+
  })

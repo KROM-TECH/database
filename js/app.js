@@ -24,7 +24,9 @@ document.getElementById('sub').addEventListener('click', function(e){
     email:email
   }).then(()=>{
     console.log('all Done')
-    // location.reload()
+
+    document.getElementById('sub').innerHTML = 'Saved'
+    loaction.reload()
   })
 });
 

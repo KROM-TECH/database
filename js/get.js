@@ -12,15 +12,16 @@ document.getElementById('search').addEventListener('click', function (e) {
   uniColl.where("service", "==", `${service}`)
     .get()
     .then(function (querySnapshot) {
+      if (querySnapshot.empty) {
+        Loader.innerHTML = `<h4 class="center red-text">Oops, No result found</h4>`
+      }
       querySnapshot.forEach(function (doc) {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
   // db.collection(`${university}`).onSnapshot((snapshot) => {
   //   // console.log(snapshot.docChanges())
   //   snapshot.docChanges().forEach(change => {
 
-
         loadData(doc.data())
+
       
     })
 })
@@ -34,11 +35,11 @@ function loadData(data){
   console.log(data)
   const html = `
       <li>
-        <div class="collapsible-header ">${data.business}</div>
+        <div class="collapsible-header ">${encodeURIComponent(data.business)}</div>
         <div class="collapsible-body">
-          <p> <span class="blue-text">Description</span>:- ${data.description}</p>
-          <p> <span class="blue-text">Specifications</span>:- ${data.specification}</p>
-          <p> <span class="blue-text">Contact</span>:- ${data.contact}</p>
+          <p> <span class="blue-text">Description</span>:- ${encodeURIComponent(data.description)}</p>
+          <p> <span class="blue-text">Specifications</span>:- ${encodeURIComponent(data.specification)}</p>
+          <p> <span class="blue-text">Contact</span>:- ${encodeURIComponent(data.contact)}</p>
         </div>
       </li>
     `;

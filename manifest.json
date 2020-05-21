@@ -23,11 +23,11 @@
     {
       "name": "Services",
       "short_name": "services",
-      "description": "View weather information for today",
+      "description": "Connecting Students to first-Class Services",
       "url": "./service",
       "icons": [
         {
-          "src": "/img/today.png",
+          "src": "/img/192px.png",
           "sizes": "192x192"
         }
       ]

@@ -1,11 +1,20 @@
 const Loader = document.querySelector('.collapsible')
 const result = document.querySelector('#result')
+const uniWarn = document.querySelector('#uniWarning')
+const uni = document.getElementById('university')
 
 document.getElementById('search').addEventListener('click', function (e) {
   e.preventDefault();
   Loader.innerHTML = ""
+  uni.addEventListener('change', function(){
+    uniWarn.innerHTML = ""
+  })
 
-  const university = document.getElementById('university').value;
+  const university = uni.value;
+  if (university == "") {
+    uniWarn.innerHTML = `<span class="helper-text red-text">Select a University</span>`
+  }
+
   const service = document.getElementById('service').value;
   result.innerHTML = service
   const uniColl = db.collection(`${university}`)

@@ -9,7 +9,7 @@ document.getElementById('search').addEventListener('click', function (e) {
   uni.addEventListener('change', function(){
     uniWarn.innerHTML = ""
   })
-
+  
   const university = uni.value;
   if (university == "") {
     uniWarn.innerHTML = `<span class="helper-text red-text">Select a University</span>`
@@ -19,7 +19,6 @@ document.getElementById('search').addEventListener('click', function (e) {
   result.innerHTML = service
   const uniColl = db.collection(`${university}`)
 
-  console.log(service)
 
   if(service == 'viewAll'){
     uniColl.get().then(function(querySnapshot){

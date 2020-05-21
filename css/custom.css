@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
-
 body {
   font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -14,12 +13,12 @@ body {
   margin: 0.5rem;
 }
 
+
+
 .background {
   display: flex;
   min-height: 100vh;
 }
-
-
 
 .screen {
   position: relative;
@@ -38,7 +37,6 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
   z-index: -1;
 }
-
 
 .screen-body {
   display: flex;
@@ -126,24 +124,19 @@ body {
   color: #2196F3;
 }
 
-
 @media screen and (max-width: 520px) {
   .screen-body {
     flex-direction: column;
   }
-
   .screen-body-item.left {
     margin-bottom: 30px;
   }
-
   .app-title {
     flex-direction: row;
   }
-
   .app-title span {
     margin-right: 12px;
   }
-
   .app-title:after {
     display: none;
   }
@@ -153,7 +146,6 @@ body {
   .screen-body {
     padding: 40px;
   }
-
   .screen-body-item {
     padding: 0;
   }

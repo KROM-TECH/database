@@ -2,9 +2,11 @@
 <html>
 
 <head>
+  <link rel='icon' href='./img/512px.ico' type='image/x-icon' />
+  <link rel="manifest" href="/manifest.json">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./css/custom.css">
+  <link rel="stylesheet" href="./css/custom.css">
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -66,7 +68,8 @@
           <option value="ru">Redeemer's University</option>
         </select>
         <label>University</label>
-        <span class="helper-text" data-error="wrong" id="uniWarning" data-success="right">If your University isn't on the list, pls make
+        <span class="helper-text" data-error="wrong" id="uniWarning" data-success="right">If your University isn't on
+          the list, pls make
           a request on any of our contact platform</span>
       </div>
 
@@ -108,7 +111,7 @@
       <p>Below are the search results for <span id="result">result</span> in the above university</p>
     </div>
     <ul class="collapsible">
-      
+
     </ul>
 
   </section>
@@ -119,13 +122,13 @@
   <script>
     M.AutoInit();
   </script>
-  
+
   <!--Firebase App(the core Firebase SDK) is always required and must be listed first-->
   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
-  
+
   <!--If you enabled Analytics in your project, add the Firebase SDK for Analytics-->
   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
-  
+
   <!--Add Firebase products that you want to use-->
   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
@@ -136,8 +139,8 @@
     firebase.analytics();
     db = firebase.firestore()
   </script>
-  
-  
+
+
   <script src="./js/get.js"></script>
 </body>
 

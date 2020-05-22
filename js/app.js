@@ -16,7 +16,8 @@ document.getElementById('sub').addEventListener('click', function(e){
   business: bisName,
   description:description,
   specification:specification,
-  contact:contact
+  contact:contact,
+  verification: 'unverified'
 }).then(()=>{
   console.log('first done')
   db.collection(university).doc(`${bisName}` + '.' + `${fullName.charAt(0)}`).collection('details').doc('detail').set({
@@ -26,7 +27,7 @@ document.getElementById('sub').addEventListener('click', function(e){
     console.log('all Done')
 
     document.getElementById('sub').innerHTML = 'Saved'
-    loaction.reload()
+    location.reload()
   })
 });
 

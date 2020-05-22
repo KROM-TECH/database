@@ -36,7 +36,6 @@ document.getElementById('search').addEventListener('click', function (e) {
         Loader.innerHTML = `<h4 class="center red-text">Oops, No result found</h4>`
       }
       querySnapshot.forEach(function (doc) {
-
         loadData(doc.data())      
     })
 })
@@ -56,10 +55,16 @@ function loadData(data){
           <p> <span class="blue-text">Description</span>:- ${escape(data.description)}</p>
           <p> <span class="blue-text">Specifications</span>:- ${data.specification}</p>
           <p> <span class="blue-text">Contact</span>:- ${data.contact}</p>
+          <p> <span class="blue-text">Status</span>:- ${data.verification}</p>
         </div>
       </li>
     `;
   Loader.innerHTML += html
+  if (doc.data().verification == 'unverified') {
+    document.getElementById('status').className = 'red-text'
+  } else if (doc.data().verification == 'verified') {
+    document.getElementById('status').className = 'green-text'
+  }
 
 }
 
@@ -73,9 +78,12 @@ function loadDataAll(data){
           <p> <span class="blue-text">Description</span>:- ${data.description}</p>
           <p> <span class="blue-text">Specifications</span>:- ${data.specification}</p>
           <p> <span class="blue-text">Contact</span>:- ${data.contact}</p>
+          <p> <span class="blue-text">Status</span>:- <span id= "status">${data.verification} </span> </p>
         </div>
       </li>
     `;
-  Loader.innerHTML += html
 
+  Loader.innerHTML += html
+  
 }
+

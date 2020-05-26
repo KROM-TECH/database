@@ -52,7 +52,7 @@ function loadData(data){
       <li>
         <div class="collapsible-header ">${data.business}</div>
         <div class="collapsible-body">
-          <p> <span class="blue-text">Description</span>:- ${escape(data.description)}</p>
+          <p> <span class="blue-text">Description</span>:- ${data.description}</p>
           <p> <span class="blue-text">Specifications</span>:- ${data.specification}</p>
           <p> <span class="blue-text">Contact</span>:- ${data.contact}</p>
           <p> <span class="blue-text">Status</span>:- ${data.verification}</p>

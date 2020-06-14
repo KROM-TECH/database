@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "tech.theplug.thekrom.tech",
+               "sha256_cert_fingerprints": ["9A:C9:14:92:25:90:C4:81:89:6B:22:D0:B8:7B:41:51:5F:83:9E:22:40:63:9E:1B:E2:2F:53:F1:86:4B:25:A9"] }
+}]

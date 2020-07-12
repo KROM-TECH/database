@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
 body {
   font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -12,8 +13,6 @@ body {
   width: 3rem;
   margin: 0.5rem;
 }
-
-
 
 .background {
   display: flex;
@@ -149,4 +148,55 @@ body {
   .screen-body-item {
     padding: 0;
   }
+  .bg {
+    font-size: small !important;
+    height: fit-content !important;
+  }
+}
+
+nav {
+  box-shadow: none !important;
+  position: fixed;
+  background-color: transparent !important;
+}
+
+.bg {
+  background-color: white;
+  height: 55vh;
+  width: 100vw;
+  border-radius: 0px 0px 25px 25px;
+  box-shadow: 1px 6px 9px 0px gray;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center !important;
+  font-family: 'Galada', cursive;
+  color: rgba(18, 17, 17, 0.87);
+  text-shadow: 2px 3px 4px;
+  padding: 1rem 0rem;
+  padding-top: 2rem;
+}
+
+h1 {
+  padding: 0px 3px;
+}
+
+.bot {
+  font-family: 'Galada', cursive;
+  width: fit-content !important;
+  /* text-shadow: 2px 3px ; */
+  background-color: white !important;
+  color: black;
+  border: 1px solid black;
+}
+
+.bot:hover {
+  box-shadow: 1px 6px 9px 0px gray;
+  background-color: black !important;
+  color: white;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

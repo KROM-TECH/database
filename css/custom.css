@@ -242,9 +242,7 @@ article {
   /* padding-top: 2rem; */
 }
 
-body {
-  background-color: gray;
-}
+
 
 .log {
   color: black;
@@ -289,13 +287,17 @@ footer main button:hover{
  border-radius: 50px;
 }
 
-.input-field{
-  color: white;
-  width: 70%;
-  padding: 0px 50rem;
-}
+
 
 .social{
   display:flex;
   flex-direction:column;
+}
+
+.sidenav{
+  width:100vw !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

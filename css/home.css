@@ -1,0 +1,9 @@
+body {
+  background-color: gray;
+}
+
+.input-field {
+  color: white;
+  width: 70%;
+  padding: 0px 50rem;
+}

@@ -1,5 +1,6 @@
 body {
-  background-color: gray;
+  background-color: transparent;
+  overflow-x: hidden;
 }
 
 .input-field {

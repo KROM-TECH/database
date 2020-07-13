@@ -156,8 +156,9 @@ body {
 
 nav {
   box-shadow: none !important;
-  position: fixed;
+  /* position: fixed; */
   background-color: transparent !important;
+  /* opacity: 0.8; */
 }
 
 .bg {
@@ -165,7 +166,8 @@ nav {
   height: 55vh;
   width: 100vw;
   border-radius: 0px 0px 25px 25px;
-  box-shadow: 1px 6px 9px 0px gray;
+  border-bottom: 10px solid gray;
+  /* box-shadow: 1px 6px 9px 0px gray; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -196,7 +198,50 @@ h1 {
   color: white;
 }
 
-main{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+main {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  text-align: center;
+  font-family: 'Galada', cursive;
+  margin: 5rem 0px;
 }
+
+article {
+  margin: 0px 3rem
+}
+
+/* .res{
+  height: auto;
+  width: 27.5%;
+} */
+
+@media screen and (max-width:640px) {
+  main {
+    flex-direction: column;
+  }
+  .res {
+    flex-direction: column-reverse;
+  }
+}
+
+.title {
+  font-family: 'Galada', cursive;
+  color: rgba(18, 17, 17, 0.87);
+  text-shadow: 2px 3px 4px;
+  text-align: center;
+  /* padding: 1rem 0rem; */
+  /* padding-top: 2rem; */
+}
+
+body {
+  background-color: gray;
+}
+
+.log {
+  color: #09328c;
+  margin: 0;
+  padding: 0;
+  font-family: 'Galada', cursive;}

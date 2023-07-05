@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/KROM-TECH/database#readme",
   "dependencies": {
-    "firebase": "^7.14.4"
+    "firebase": "^7.24.0"
   }
 }
